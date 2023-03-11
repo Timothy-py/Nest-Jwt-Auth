@@ -49,6 +49,10 @@ export class AuthService {
                 hash: hash
             }
         })
+
+        const tokens = await this.getTokens(newUser.id, newUser.email)
+
+        return tokens
     }
 
     async signinLocal(){}
